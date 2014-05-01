@@ -4,6 +4,8 @@
 
 Fetches the information directly from the registry 
 
+https://www.npmjs.org/package/package-info
+
 
 ## Install
 
