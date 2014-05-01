@@ -12,7 +12,6 @@ function help() {
 	console.log('');
 	console.log('Example');
 	console.log('  $ info pageres');
-	console.log('  0.2.3');
 }
 
 if (!input || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
