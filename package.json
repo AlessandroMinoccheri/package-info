@@ -1,0 +1,39 @@
+{
+  "name": "package-info",
+  "version": "0.0.1",
+  "description": "Get the info of a npm package",
+  "license": "MIT",
+  "repository": "AlessandroMinoccheri/package-info",
+  "bin": {
+    "package-info": "cli.js"
+  },
+  "author": {
+    "name": "Alessandro Minoccheri",
+    "email": "alessandro.minoccheri@gmail.com",
+    "url": "https://github.com/AlessandroMinoccheri/"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "info",
+    "npm",
+    "package",
+    "package.json",
+    "current",
+    "module"
+  ],
+  "dependencies": {
+    "got": "^0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
