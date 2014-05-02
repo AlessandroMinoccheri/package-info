@@ -6,6 +6,12 @@ Fetches the information directly from the registry
 
 https://www.npmjs.org/package/package-info
 
+To create this repository I have forked this project and make some edit:
+
+https://github.com/sindresorhus/npm-name
+
+Thanks to the author https://github.com/sindresorhus
+
 
 ## Install
 
