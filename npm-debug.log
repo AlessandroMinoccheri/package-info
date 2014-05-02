@@ -1,0 +1,117 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.8
+3 info using node@v0.10.24
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/alessandrominoccheri/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz
+12 verbose folder .
+13 info prepublish package-info@0.0.2
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/alessandrominoccheri/.npm/1f1177db-tar.lock
+16 silly lockFile 79edceb1-52102-0-5478941942565143-tmp-tgz tar:///var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz
+17 verbose lock tar:///var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz /Users/alessandrominoccheri/.npm/79edceb1-52102-0-5478941942565143-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 79edceb1-52102-0-5478941942565143-tmp-tgz tar:///var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz
+21 silly lockFile 79edceb1-52102-0-5478941942565143-tmp-tgz tar:///var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz
+22 verbose tar unpack /var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz
+23 silly lockFile 49e4aef9-i-npm-package-info-0-0-2-package tar:///Users/alessandrominoccheri/.npm/package-info/0.0.2/package
+24 verbose lock tar:///Users/alessandrominoccheri/.npm/package-info/0.0.2/package /Users/alessandrominoccheri/.npm/49e4aef9-i-npm-package-info-0-0-2-package.lock
+25 silly lockFile 79edceb1-52102-0-5478941942565143-tmp-tgz tar:///var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz
+26 verbose lock tar:///var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz /Users/alessandrominoccheri/.npm/79edceb1-52102-0-5478941942565143-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry README.md
+30 silly gunzTarPerm extractEntry cli.js
+31 silly gunzTarPerm extractEntry index.js
+32 silly lockFile 49e4aef9-i-npm-package-info-0-0-2-package tar:///Users/alessandrominoccheri/.npm/package-info/0.0.2/package
+33 silly lockFile 49e4aef9-i-npm-package-info-0-0-2-package tar:///Users/alessandrominoccheri/.npm/package-info/0.0.2/package
+34 silly lockFile 79edceb1-52102-0-5478941942565143-tmp-tgz tar:///var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz
+35 silly lockFile 79edceb1-52102-0-5478941942565143-tmp-tgz tar:///var/folders/pw/r3hnmg6x1db8ngg0kg0rrlvc0000gn/T/npm-756-TnZfc3sL/1399028852102-0.5478941942565143/tmp.tgz
+36 silly lockFile 3a52ce78- .
+37 silly lockFile 3a52ce78- .
+38 silly publish { name: 'package-info',
+38 silly publish   version: '0.0.2',
+38 silly publish   description: 'Get the information of a npm package',
+38 silly publish   license: 'MIT',
+38 silly publish   repository:
+38 silly publish    { type: 'git',
+38 silly publish      url: 'git://github.com/AlessandroMinoccheri/package-info' },
+38 silly publish   bin: { 'package-info': 'cli.js' },
+38 silly publish   author:
+38 silly publish    { name: 'Alessandro Minoccheri',
+38 silly publish      email: 'alessandro.minoccheri@gmail.com',
+38 silly publish      url: 'https://github.com/AlessandroMinoccheri/' },
+38 silly publish   engines: { node: '>=0.10.0' },
+38 silly publish   scripts: { test: 'mocha' },
+38 silly publish   files: [ 'index.js', 'cli.js' ],
+38 silly publish   keywords: [ 'info', 'npm', 'package', 'package.json', 'current', 'module' ],
+38 silly publish   dependencies: { got: '^0.2.0' },
+38 silly publish   devDependencies: { mocha: '*' },
+38 silly publish   readme: '# package-info \n\n> Get the information of a npm package\n\nFetches the information directly from the registry \n\nhttps://www.npmjs.org/package/package-info\n\n\n## Install\n\n```sh\n$ npm install --save package-info\n```\n\n\n## Usage\n\n```js\nvar info = require(\'package-info\');\n\ninfo(\'pageres\', function (err, version) {\n\tconsole.log(version);\n});\n```\n\n\n## CLI\n\n```sh\n$ npm install --global package-info\n```\n\n```sh\n$ package-info --help\n\nUsage\n  $ package-info <package-name>\n\nExample\n  $ package-info pageres\n```\n\n\n## License\n\nThe MIT License (MIT)\n\nCopyright (c) 2014 Alessandro Minoccheri\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n',
+38 silly publish   readmeFilename: 'README.md',
+38 silly publish   bugs: { url: 'https://github.com/AlessandroMinoccheri/package-info/issues' },
+38 silly publish   homepage: 'https://github.com/AlessandroMinoccheri/package-info',
+38 silly publish   _id: 'package-info@0.0.2',
+38 silly publish   _shasum: '879523c82ba27717b1599669ffca15b1c09f930d',
+38 silly publish   _from: '.' }
+39 verbose url raw package-info
+40 verbose url resolving [ 'https://registry.npmjs.org/', './package-info' ]
+41 verbose url resolved https://registry.npmjs.org/package-info
+42 info trying registry request attempt 1 at 13:07:32
+43 http PUT https://registry.npmjs.org/package-info
+44 http 403 https://registry.npmjs.org/package-info
+45 verbose headers { date: 'Fri, 02 May 2014 11:07:35 GMT',
+45 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+45 verbose headers   'content-type': 'application/json',
+45 verbose headers   'cache-control': 'max-age=1',
+45 verbose headers   'content-length': '4690',
+45 verbose headers   'accept-ranges': 'bytes',
+45 verbose headers   via: '1.1 varnish',
+45 verbose headers   'x-served-by': 'cache-fra1225-FRA',
+45 verbose headers   'x-cache': 'MISS',
+45 verbose headers   'x-cache-hits': '0',
+45 verbose headers   'x-timer': 'S1399028854.786046505,VS0,VE669',
+45 verbose headers   'keep-alive': 'timeout=10, max=50',
+45 verbose headers   connection: 'Keep-Alive' }
+46 error publish Failed PUT 403
+47 error Error: forbidden cannot modify pre-existing version: 0.0.2
+47 error old={"name":"package-info","version":"0.0.2","description":"Get the information of a npm package","license":"MIT","repository":{"type":"git","url":"git://github.com/AlessandroMinoccheri/package-info"},"bin":{"package-info":"cli.js"},"author":{"name":"Alessandro Minoccheri","email":"alessandro.minoccheri@gmail.com","url":"https://github.com/AlessandroMinoccheri/"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["index.js","cli.js"],"keywords":["info","npm","package","package.json","current","module"],"dependencies":{"got":"^0.2.0"},"devDependencies":{"mocha":"*"},"bugs":{"url":"https://github.com/AlessandroMinoccheri/package-info/issues"},"homepage":"https://github.com/AlessandroMinoccheri/package-info","_id":"package-info@0.0.2","_shasum":"879523c82ba27717b1599669ffca15b1c09f930d","_from":".","_npmVersion":"1.4.8","_npmUser":{"name":"alessandrominoccheri","email":"alessandro.minoccheri@gmail.com"},"maintainers":[{"name":"alessandrominoccheri","email":"alessandro.minoccheri@gmail.com"}],"dist":{"shasum":"879523c82ba27717b1599669ffca15b1c09f930d","tarball":"http://registry.npmjs.org/package-info/-/package-info-0.0.2.tgz"}}
+47 error new={"name":"package-info","version":"0.0.2","description":"Get the information of a npm package","license":"MIT","repository":{"type":"git","url":"git://github.com/AlessandroMinoccheri/package-info"},"bin":{"package-info":"cli.js"},"author":{"name":"Alessandro Minoccheri","email":"alessandro.minoccheri@gmail.com","url":"https://github.com/AlessandroMinoccheri/"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["index.js","cli.js"],"keywords":["info","npm","package","package.json","current","module"],"dependencies":{"got":"^0.2.0"},"devDependencies":{"mocha":"*"},"readme":"# package-info \u000a\u000a> Get the information of a npm package\u000a\u000aFetches the information directly from the registry \u000a\u000ahttps://www.npmjs.org/package/package-info\u000a\u000a\u000a## Install\u000a\u000a```sh\u000a$ npm install --save package-info\u000a```\u000a\u000a\u000a## Usage\u000a\u000a```js\u000avar info = require('package-info');\u000a\u000ainfo('pageres', function (err, version) {\u000a\u0009console.log(version);\u000a});\u000a```\u000a\u000a\u000a## CLI\u000a\u000a```sh\u000a$ npm install --global package-info\u000a```\u000a\u000a```sh\u000a$ package-info --help\u000a\u000aUsage\u000a  $ package-info <package-name>\u000a\u000aExample\u000a  $ package-info pageres\u000a```\u000a\u000a\u000a## License\u000a\u000aThe MIT License (MIT)\u000a\u000aCopyright (c) 2014 Alessandro Minoccheri\u000a\u000aPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\u000a\u000aThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\u000a\u000aTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\u000a\u000a","readmeFilename":"README.md","bugs":{"url":"https://github.com/AlessandroMinoccheri/package-info/issues"},"homepage":"https://github.com/AlessandroMinoccheri/package-info","_id":"package-info@0.0.2","_shasum":"879523c82ba27717b1599669ffca15b1c09f930d","_from":".","_npmVersion":"1.4.8","_npmUser":{"name":"alessandrominoccheri","email":"alessandro.minoccheri@gmail.com"},"maintainers":[{"name":"alessandrominoccheri","email":"alessandro.minoccheri@gmail.com"}],"dist":{"shasum":"879523c82ba27717b1599669ffca15b1c09f930d","tarball":"http://registry.npmjs.org/package-info/-/package-info-0.0.2.tgz"}}: package-info
+47 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:262:14)
+47 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:200:65)
+47 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+47 error     at Request.EventEmitter.emit (events.js:98:17)
+47 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+47 error     at Request.EventEmitter.emit (events.js:117:20)
+47 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+47 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+47 error     at _stream_readable.js:920:16
+47 error     at process._tickCallback (node.js:415:13)
+48 error If you need help, you may report this *entire* log,
+48 error including the npm and node versions, at:
+48 error     <http://github.com/npm/npm/issues>
+49 error System Darwin 13.1.0
+50 error command "node" "/usr/local/bin/npm" "publish"
+51 error cwd /Users/alessandrominoccheri/Sites/package-info
+52 error node -v v0.10.24
+53 error npm -v 1.4.8
+54 verbose exit [ 1, true ]
