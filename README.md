@@ -13,10 +13,10 @@ https://github.com/sindresorhus/npm-name
 Thanks to the author https://github.com/sindresorhus
 
 The information that you can retrieve are:
-- <b>repository name:</b>
-- <b>repository version:</b>
-- <b>repository description:</b>
-- <b>repository license:</b>
+- <b>package name:</b>
+- <b>package version:</b>
+- <b>package description:</b>
+- <b>package license:</b>
 - <b>author name:</b>
 
 ## Install
