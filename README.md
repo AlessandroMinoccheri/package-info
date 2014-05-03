@@ -55,7 +55,7 @@ Example
 It prints:
 ```
 name: package-info 
-version: 0.1.0 
+version: 0.1.1 
 description: Get the information of a npm package 
 license: MIT 
 author: Alessandro Minoccheri
