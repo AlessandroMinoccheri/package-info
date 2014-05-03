@@ -12,10 +12,12 @@ module.exports = function (name, cb) {
 			return cb(err);
 		}
 
-		var name = JSON.parse(data).name;
-		var version = JSON.parse(data).version;
-		var description = JSON.parse(data).description;
-		var license = JSON.parse(data).license;
+		var data_parsed = JSON.parse(data);
+		var name = data_parsed.name;
+		var version = data_parsed.version;
+		var description = data_parsed.description;
+		var license = data_parsed.license;
+		
 		cb(null, 'name: ' + name + ' \nversion: ' + version + ' \ndescription: ' + description + ' \nlicense: ' + license);
 	});
 };
