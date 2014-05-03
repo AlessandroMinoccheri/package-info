@@ -13,11 +13,11 @@ https://github.com/sindresorhus/npm-name
 Thanks to the author https://github.com/sindresorhus
 
 The information that you can retrieve are:
-- <b>package name:</b>
-- <b>package version:</b>
-- <b>package description:</b>
-- <b>package license:</b>
-- <b>author name:</b>
+- <b>package name</b>
+- <b>package version</b>
+- <b>package description</b>
+- <b>package license</b>
+- <b>author name</b>
 
 ## Install
 
@@ -55,7 +55,7 @@ Example
 It prints:
 ```
 name: package-info 
-version: 0.1.1 
+version: 0.1.3 
 description: Get the information of a npm package 
 license: MIT 
 author: Alessandro Minoccheri
