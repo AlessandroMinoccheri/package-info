@@ -17,7 +17,8 @@ module.exports = function (name, cb) {
 		var version = data_parsed.version;
 		var description = data_parsed.description;
 		var license = data_parsed.license;
-		
-		cb(null, 'name: ' + name + ' \nversion: ' + version + ' \ndescription: ' + description + ' \nlicense: ' + license);
+		var author_name = data_parsed.author.name;
+
+		cb(null, 'name: ' + name + ' \nversion: ' + version + ' \ndescription: ' + description + ' \nlicense: ' + license + ' \nauthor: ' + author_name);
 	});
 };
