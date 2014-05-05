@@ -17,7 +17,7 @@ The information that you can retrieve are:
 - <b>package version</b>
 - <b>package description</b>
 - <b>package license</b>
-- <b>author name</b>
+- <b>package author name</b>
 
 ## Install
 
@@ -52,7 +52,7 @@ Example
   $ package-info package-info
 ```
 
-It prints:
+It will prints:
 ```
 name: package-info 
 version: 0.1.3 
