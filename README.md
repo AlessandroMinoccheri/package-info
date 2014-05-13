@@ -17,6 +17,7 @@ The information that you can retrieve are:
 - <b>package version</b>
 - <b>package description</b>
 - <b>package license</b>
+- <b>package homepage</b>
 - <b>package author name</b>
 
 ## Install
@@ -57,7 +58,8 @@ It will prints:
 name: package-info 
 version: 0.1.3 
 description: Get the information of a npm package 
-license: MIT 
+license: MIT
+homepage: https://github.com/AlessandroMinoccheri/package-info
 author: Alessandro Minoccheri
 ```
 

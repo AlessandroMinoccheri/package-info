@@ -8,10 +8,10 @@ function help() {
 	console.log(pkg.description);
 	console.log('');
 	console.log('Usage');
-	console.log('  $ info <package-name>');
+	console.log('  $ package-info <package-name>');
 	console.log('');
 	console.log('Example');
-	console.log('  $ info pageres');
+	console.log('  $ package-info pageres');
 }
 
 if (!input || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
