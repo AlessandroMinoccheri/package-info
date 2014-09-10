@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 var pkg = require('./package.json');
-var info = require('./index');
+var info = require('./');
 var input = process.argv[2];
 
 function help() {
@@ -14,7 +14,7 @@ function help() {
 	console.log('  $ package-info pageres');
 }
 
-if (!input || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
+if (!input || argv.indexOf('--help') !== -1) {
 	help();
 	return;
 }
