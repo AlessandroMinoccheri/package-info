@@ -3,6 +3,7 @@
 var pkg = require('./package.json');
 var info = require('./');
 var input = process.argv[2];
+var argv = process.argv;
 
 function help() {
 	console.log(pkg.description);
