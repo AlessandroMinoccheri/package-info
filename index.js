@@ -15,7 +15,7 @@ module.exports = function (name, cb) {
 
 		    var data_parsed = JSON.parse(data);
 		    var name = data_parsed.name;
-		    var version = data_parsed.version;
+		    var version = data_parsed[ 'dist-tags' ].latest;
 		    var description = data_parsed.description;
 		    var license = data_parsed.license;
 		    var homepage = data_parsed.homepage;
