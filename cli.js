@@ -15,8 +15,6 @@ function help() {
 	console.log('  $ package-info pageres');
 }
 
-console.log(argv);
-
 if (!input || argv.indexOf('--help') !== -1) {
 	help();
 	return;
