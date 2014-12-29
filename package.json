@@ -1,6 +1,6 @@
 {
   "name": "package-info",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Get the information of a npm package",
   "license": "MIT",
   "repository": "AlessandroMinoccheri/package-info",
