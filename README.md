@@ -18,7 +18,7 @@ The information that you can retrieve are:
 - <b>package description</b>
 - <b>package license</b>
 - <b>package homepage</b>
-- <b>package author name (from the 2.1.0 version 'author name' can be the list of maintainers who have contributed to the package, if this parameter is specified in the package.json of the package.)</b>
+- <b>package author name</b> (from the 2.1.0 version 'author name' can be the list of maintainers who have contributed to the package, if this parameter is specified in the package.json of the package.)
 
 ## Install
 
