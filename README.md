@@ -56,7 +56,7 @@ Example
 It will prints:
 ```
 name: package-info 
-version: 2.0.0
+version: 2.1.0
 description: Get the information of a npm package 
 license: MIT
 homepage: https://github.com/AlessandroMinoccheri/package-info
