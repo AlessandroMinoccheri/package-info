@@ -1,5 +1,7 @@
 # package-info 
 
+[![Build Status](https://api.travis-ci.org/AlessandroMinoccheri/package-info.png)](https://travis-ci.org/AlessandroMinoccheri/package-info)
+
 > Get the information of a npm package
 
 Fetches the information directly from the registry 
