@@ -47,12 +47,12 @@ module.exports = function (name, cb) {
 		}
 
 		cb(null, {
-			name: name,
-			version: version,
-			description: description,
-			license: license,
-			homepage: homepage,
-			author: author_name
+			name          	: name,
+			version			: version,
+			description		: description,
+			license			: license,
+			homepage		: homepage,
+			author			: author_name
 		});
 	});
 };
