@@ -4,7 +4,7 @@
 
 [![Build Status](https://api.travis-ci.org/AlessandroMinoccheri/package-info.png)](https://travis-ci.org/AlessandroMinoccheri/package-info)
 
-> Get the information of a npm package
+> Get the information of a npm package and return an object
 
 Fetches the information directly from the registry 
 
