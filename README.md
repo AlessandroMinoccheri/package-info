@@ -1,4 +1,4 @@
-# package-info 
+# package-info  v2.2.2
 
 [![Join the chat at https://gitter.im/AlessandroMinoccheri/package-info](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AlessandroMinoccheri/package-info?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -60,7 +60,7 @@ Example
 It will prints:
 ```
 name: package-info 
-version: 2.2.1
+version: 2.2.2
 description: Get the information of a npm package 
 license: MIT
 homepage: https://github.com/AlessandroMinoccheri/package-info
