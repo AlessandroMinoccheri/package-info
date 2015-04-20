@@ -36,8 +36,8 @@ $ npm install --save package-info
 ```js
 var info = require('package-info');
 
-info('pageres', function (err, version) {
-	console.log(version);
+info('package-info', function (err, informations) {
+	console.log(informations);
 });
 ```
 
