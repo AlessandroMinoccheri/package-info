@@ -1,7 +1,27 @@
 'use strict';
-var got = require('got');
-var registryUrl = require('registry-url');
+const got = require('got');
+const registryUrl = require('registry-url')();
 
+function request(name) {
+	return got.head(registryUrl + encodeURIComponent(name))
+		.then(() => false)
+		.catch(err => {
+			if (err.statusCode === 404) {
+				return true;
+			}
+
+			throw err;
+		});
+}
+
+module.exports = name => {
+	if (!(typeof name === 'string' && name.length !== 0)) {
+		return Promise.reject(new Error('Package name required'));
+	}
+
+	return request(name);
+};
+/*
 module.exports = function (name, cb) {
 	got(registryUrl + encodeURIComponent(name), {method: 'GET'}, function (err, data) {
 		var name 		= '';
@@ -24,7 +44,7 @@ module.exports = function (name, cb) {
 		var version 	= data_parsed[ 'dist-tags' ].latest;
 		var description = data_parsed.description;
 		var license 	= data_parsed.license;
-		
+
 		if(data_parsed.homepage !== undefined){
 			var homepage 	= data_parsed.homepage;
 		}
@@ -56,3 +76,4 @@ module.exports = function (name, cb) {
 		});
 	});
 };
+*/

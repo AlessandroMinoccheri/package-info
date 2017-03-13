@@ -4,9 +4,6 @@
   "description": "Get the information of a npm package",
   "license": "MIT",
   "repository": "AlessandroMinoccheri/package-info",
-  "bin": {
-    "package-info": "cli.js"
-  },
   "author": {
     "name": "Alessandro Minoccheri",
     "email": "alessandro.minoccheri@gmail.com",
@@ -19,8 +16,7 @@
     "test": "mocha"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
     "info",
@@ -35,8 +31,8 @@
     "author"
   ],
   "dependencies": {
-    "got": "^0.3.0",
-    "registry-url": "^2.0.0"
+      "got": "^6.3.0",
+      "registry-url": "^3.0.0"
   },
   "devDependencies": {
     "mocha": "*"
