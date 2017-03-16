@@ -1,9 +1,10 @@
 'use strict';
 const got = require('got');
 const registryUrl = require('registry-url')();
+const zip = require('lodash.zip');
 
-function request(name) {
-	return got.head(registryUrl + encodeURIComponent(name))
+/*function request(name) {
+	return got.head(registryUrl + name.toLowerCase())
 		.then(() => false)
 		.catch(err => {
 			if (err.statusCode === 404) {
@@ -20,8 +21,8 @@ module.exports = name => {
 	}
 
 	return request(name);
-};
-/*
+};*/
+
 module.exports = function (name, cb) {
 	got(registryUrl + encodeURIComponent(name), {method: 'GET'}, function (err, data) {
 		var name 		= '';
@@ -76,4 +77,3 @@ module.exports = function (name, cb) {
 		});
 	});
 };
-*/

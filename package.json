@@ -1,9 +1,10 @@
 {
   "name": "package-info",
-  "version": "2.2.3",
+  "version": "2.2.5",
   "description": "Get the information of a npm package",
   "license": "MIT",
   "repository": "AlessandroMinoccheri/package-info",
+  "bin": "cli.js",
   "author": {
     "name": "Alessandro Minoccheri",
     "email": "alessandro.minoccheri@gmail.com",
@@ -16,7 +17,8 @@
     "test": "mocha"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "cli.js"
   ],
   "keywords": [
     "info",
@@ -31,9 +33,9 @@
     "author"
   ],
   "dependencies": {
-    "cat-names": "^1.0.2",
-    "got": "^6.3.0",
-    "registry-url": "^3.0.0"
+      "got": "^6.3.0",
+      "lodash.zip": "^4.0.0",
+      "registry-url": "^3.0.0"
   },
   "devDependencies": {
     "mocha": "*"
