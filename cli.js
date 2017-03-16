@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-'use strict';
+/*'use strict';
 var pkg = require('./package.json');
 var info = require('./');
 var argv = process.argv.slice(2);
@@ -34,3 +34,4 @@ info(input, function (err, version) {
 
 	console.log(version);
 });
+*/

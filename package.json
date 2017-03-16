@@ -31,8 +31,9 @@
     "author"
   ],
   "dependencies": {
-      "got": "^6.3.0",
-      "registry-url": "^3.0.0"
+    "cat-names": "^1.0.2",
+    "got": "^6.3.0",
+    "registry-url": "^3.0.0"
   },
   "devDependencies": {
     "mocha": "*"
