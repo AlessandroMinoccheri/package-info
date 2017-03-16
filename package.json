@@ -1,10 +1,12 @@
 {
   "name": "package-info",
-  "version": "2.2.5",
+  "version": "2.2.7",
   "description": "Get the information of a npm package",
   "license": "MIT",
   "repository": "AlessandroMinoccheri/package-info",
-  "bin": "cli.js",
+  "bin": {
+    "package-info": "cli.js"
+  },
   "author": {
     "name": "Alessandro Minoccheri",
     "email": "alessandro.minoccheri@gmail.com",
