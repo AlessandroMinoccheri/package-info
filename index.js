@@ -1,7 +1,6 @@
 'use strict';
-const got = require('got');
-const registryUrl = require('registry-url')();
-const zip = require('lodash.zip');
+var got = require('got');
+var registryUrl = require('registry-url');
 
 /*function request(name) {
 	return got.head(registryUrl + name.toLowerCase())
