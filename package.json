@@ -36,8 +36,8 @@
   ],
   "dependencies": {
       "got": "^6.3.0",
-      "lodash.zip": "^4.0.0",
-      "registry-url": "^3.0.0"
+      "registry-url": "^3.0.0",
+      "pinkie-promise": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "*"
