@@ -25,7 +25,14 @@ if (process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -
 	return;
 }
 
-info(input, function (err, version) {
+info(input)
+.then(version => console.log(version))
+.catch(err => {
+  console.error(err);
+  process.exit(1);
+});
+
+/*info(input, function (err, version) {
 	if (err) {
 		console.error(err);
 		process.exit(1);
@@ -33,4 +40,4 @@ info(input, function (err, version) {
 	}
 
 	console.log(version);
-});
+});*/

@@ -1,6 +1,6 @@
 {
   "name": "package-info",
-  "version": "2.2.3",
+  "version": "2.2.8",
   "description": "Get the information of a npm package",
   "license": "MIT",
   "repository": "AlessandroMinoccheri/package-info",
@@ -35,8 +35,9 @@
     "author"
   ],
   "dependencies": {
-    "got": "^0.3.0",
-    "registry-url": "^2.0.0"
+      "got": "^6.3.0",
+      "registry-url": "^2.0.0",
+      "pinkie-promise": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "*"
