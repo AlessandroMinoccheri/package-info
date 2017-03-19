@@ -8,7 +8,7 @@ module.exports = function (name) {
 		return Promise.reject(new Error('package name required'));
 	}
 
-	return got.head(registryUrl + name.toLowerCase())
+	return got(registryUrl + name.toLowerCase())
 		.then(function (data) {
 			var name 		= '';
 			var version 	= '';
@@ -17,7 +17,8 @@ module.exports = function (name) {
 			var homepage 	= '';
 			var authorName = '';
 
-			var dataParsed = JSON.parse(data);
+			var dataParsed = JSON.parse(data.body);
+
 			name 		= dataParsed.name;
 			version 	= dataParsed[ 'dist-tags' ].latest;
 			description = dataParsed.description;
