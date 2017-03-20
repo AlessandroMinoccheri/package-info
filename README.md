@@ -4,9 +4,9 @@
 
 [![Build Status](https://api.travis-ci.org/AlessandroMinoccheri/package-info.png)](https://travis-ci.org/AlessandroMinoccheri/package-info)
 
-> Get the information of a npm package and return an object
+> Get information about NPM packages. Contribute to package-info development by creating an account on GitHub.
 
-Fetches the information directly from the registry 
+Fetches the information directly from the registry
 
 https://www.npmjs.org/package/package-info
 
@@ -59,9 +59,9 @@ Example
 
 It will prints:
 ```
-name: package-info 
+name: package-info
 version: 2.2.3
-description: Get the information of a npm package 
+description: Get the information of a npm package
 license: MIT
 homepage: https://github.com/AlessandroMinoccheri/package-info
 author: Alessandro Minoccheri
@@ -78,4 +78,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-

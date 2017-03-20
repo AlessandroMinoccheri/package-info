@@ -31,13 +31,3 @@ info(input)
   console.error(err);
   process.exit(1);
 });
-
-/*info(input, function (err, version) {
-	if (err) {
-		console.error(err);
-		process.exit(1);
-		return;
-	}
-
-	console.log(version);
-});*/
