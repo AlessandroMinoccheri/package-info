@@ -1,4 +1,4 @@
-# package-info  v2.2.3
+# package-info  v3.0.1
 
 [![Join the chat at https://gitter.im/AlessandroMinoccheri/package-info](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AlessandroMinoccheri/package-info?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
