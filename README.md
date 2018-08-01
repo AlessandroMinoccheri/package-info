@@ -36,9 +36,9 @@ $ npm install --save package-info
 ```js
 var info = require('package-info');
 
-info('package-info', function (err, informations) {
-	console.log(informations);
-});
+(async () => {
+    console.log(await info('package-info'));
+})();
 ```
 
 ## CLI
