@@ -1,8 +1,6 @@
-# package-info  v3.0.2
+# package-info  v4.0.0
 
 [![Join the chat at https://gitter.im/AlessandroMinoccheri/package-info](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AlessandroMinoccheri/package-info?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![Build Status](https://api.travis-ci.org/AlessandroMinoccheri/package-info.png)](https://travis-ci.org/AlessandroMinoccheri/package-info)
 
 > Get information about NPM packages. Contribute to package-info development by creating an account on GitHub.
 
