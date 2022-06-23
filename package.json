@@ -35,7 +35,7 @@
     "author"
   ],
   "dependencies": {
-    "got": "^6.3.0",
+    "got": "^11.8.5",
     "registry-url": "^2.0.0",
     "pinkie-promise": "^2.0.0"
   },
