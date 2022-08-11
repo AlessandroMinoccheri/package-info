@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 'use strict';
-var pkg = require('./package.json');
-var info = require('./');
-var argv = process.argv.slice(2);
-var input = argv[0];
+const pkg = require('./package.json');
+const info = require('./');
+const argv = process.argv.slice(2);
+const input = argv[0];
 
 function help() {
 	console.log(pkg.description);

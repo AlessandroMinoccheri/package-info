@@ -1,7 +1,6 @@
 'use strict';
-var got = require('got');
-var registryUrl = require('registry-url');
-var Promise = require('pinkie-promise');
+const got = require('got');
+const registryUrl = require('registry-url');
 
 module.exports = function (name) {
 	if (typeof name !== 'string') {
@@ -10,14 +9,14 @@ module.exports = function (name) {
 
 	return got(registryUrl + name.toLowerCase())
 		.then(function (data) {
-			var name 		= '';
-			var version 	= '';
-			var description = '';
-			var license 	= '';
-			var homepage 	= '';
-			var authorName = '';
+			let name 		= '';
+			let version 	= '';
+			let description = '';
+			let license 	= '';
+			let homepage 	= '';
+			let authorName = '';
 
-			var dataParsed = JSON.parse(data.body);
+			const dataParsed = JSON.parse(data.body);
 
 			name 		= dataParsed.name;
 			version 	= dataParsed[ 'dist-tags' ].latest;
@@ -34,7 +33,7 @@ module.exports = function (name) {
 			else{
 				if(dataParsed.maintainers !== undefined){
 					for (var i in dataParsed.maintainers) {
-						var maintainer = dataParsed.maintainers[i];
+						const maintainer = dataParsed.maintainers[i];
 						if(authorName === ''){
 							authorName = maintainer.name;
 						}
