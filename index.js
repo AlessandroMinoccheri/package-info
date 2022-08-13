@@ -32,7 +32,7 @@ module.exports = function (name) {
 			}
 			else{
 				if(dataParsed.maintainers !== undefined){
-					for (var i in dataParsed.maintainers) {
+					for (let i in dataParsed.maintainers) {
 						const maintainer = dataParsed.maintainers[i];
 						if(authorName === ''){
 							authorName = maintainer.name;

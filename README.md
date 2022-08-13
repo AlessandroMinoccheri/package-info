@@ -32,7 +32,7 @@ $ npm install --save package-info
 ## Usage
 
 ```js
-var info = require('package-info');
+const info = require('package-info');
 
 (async () => {
     console.log(await info('package-info'));
