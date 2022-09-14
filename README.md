@@ -1,6 +1,8 @@
 # package-info  v4.1.4
 
-[![Join the chat at https://gitter.im/AlessandroMinoccheri/package-info](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AlessandroMinoccheri/package-info?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/AlessandroMinoccheri/package-info/blob/master/LICENSE)
+[![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg)](https://github.com/AlessandroMinoccheri/package-info/blob/main/CONTRIBUTING.md)
+[![npm version](https://img.shields.io/npm/v/package-info.svg?style=flat)](https://www.npmjs.com/package/package-info)
 
 > Get information about NPM packages. Contribute to package-info development by creating an account on GitHub.
 
