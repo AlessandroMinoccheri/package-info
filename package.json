@@ -1,5 +1,5 @@
 {
-  "name": "package_info",
+  "name": "package-info",
   "version": "5.0.0",
   "description": "Get the information of a npm package",
   "license": "MIT",
