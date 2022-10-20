@@ -1,21 +1,38 @@
 {
   "name": "package_info",
-  "version": "1.0.0",
-  "description": "",
+  "version": "5.0.0",
+  "description": "Get the information of a npm package",
+  "license": "MIT",
+  "repository": "AlessandroMinoccheri/package-info",
   "main": "index.js",
   "bin": {
     "package-info": "src/cli.js"
+  },
+  "author": {
+    "name": "Alessandro Minoccheri",
+    "email": "alessandro.minoccheri@gmail.com",
+    "url": "https://github.com/AlessandroMinoccheri/"
   },
   "type": "module",
   "scripts": {
     "start": "tsc && node dist/index.js",
     "lint": "eslint . --ext .ts",
-    "test": "ts-mocha tests/*.ts",
+    "test": "tsc && ts-mocha tests/*.js",
+    "test-gh": "tsc && ts-mocha tests/*.js",
     "cli": "node dist/src/cli.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "info",
+    "npm",
+    "package",
+    "package.json",
+    "current",
+    "module",
+    "npm",
+    "information",
+    "version",
+    "author"
+  ],
   "devDependencies": {
     "@types/mocha": "^10.0.0",
     "@types/node": "^18.8.3",

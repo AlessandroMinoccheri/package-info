@@ -1,10 +1,12 @@
-# package-info  v4.1.4
+# package-info  v5.0.0
 
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/AlessandroMinoccheri/package-info/blob/master/LICENSE)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg)](https://github.com/AlessandroMinoccheri/package-info/blob/main/CONTRIBUTING.md)
 [![npm version](https://img.shields.io/npm/v/package-info.svg?style=flat)](https://www.npmjs.com/package/package-info)
 
 > Get information about NPM packages. Contribute to package-info development by creating an account on GitHub.
+
+From the version 5 this package uses Typescript and modules, if you don't need them, please, use the version 4.
 
 Fetches the information directly from the registry
 
