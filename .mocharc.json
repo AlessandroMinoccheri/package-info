@@ -1,0 +1,5 @@
+{
+    "extension": ["test.js"],
+    "spec": "tests/*.js",
+    "recursive": true
+}
