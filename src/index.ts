@@ -31,46 +31,28 @@ type Package = {
 }
 
 const fetchData = async (request: string): Promise<Package> => {
-    const dataParsed: PackageData = await got(request).json();
+	const dataParsed: PackageData = await got(request).json();
 
-    let name 		= dataParsed.name;
-    let version 	= dataParsed[ 'dist-tags' ].latest;
-    let description = dataParsed.description;
-    let license 	= dataParsed.license;
-    let homepage 	= '';
-    let authorName = '';
+	const name = dataParsed.name;
+	const version = dataParsed["dist-tags"].latest;
+	const description = dataParsed.description;
+	const license = dataParsed.license;
+	const homepage = dataParsed.homepage || '';
+	const author =
+		dataParsed.author?.name ||
+		dataParsed.maintainers?.map(({ name }) => name).join(', ') ||
+		'';
 
-    if(dataParsed.homepage !== undefined){
-        homepage 	= dataParsed.homepage;
-    }
-
-    if(dataParsed.author !== undefined){
-        authorName = dataParsed.author.name;
-    }
-    else{
-        if(dataParsed.maintainers !== undefined){
-            for (let i in dataParsed.maintainers) {
-                const maintainer = dataParsed.maintainers[i];
-                if(authorName === ''){
-                    authorName = maintainer.name;
-                }
-                else{
-                    authorName = authorName + ', ' + maintainer.name;
-                }
-            }
-        }
-    }
-
-    return {
-        name,
-        version,
-        description,
-        license,
-        homepage,
-        author: authorName
-    };
-}
+	return {
+		name,
+		version,
+		description,
+		license,
+		homepage,
+		author,
+	};
+};
 
 export default async function info(name: string) {
-    return fetchData(registryUrl() + name.toLowerCase());
+	return fetchData(registryUrl() + name.toLowerCase());
 }
