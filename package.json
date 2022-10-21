@@ -4,10 +4,12 @@
   "description": "Get the information of a npm package",
   "license": "MIT",
   "repository": "AlessandroMinoccheri/package-info",
+  "source": "src/index.ts",
   "main": "dist/index.js",
   "bin": {
     "package-info": "dist/cli.js"
   },
+  "types": "dist/index.d.ts",
   "author": {
     "name": "Alessandro Minoccheri",
     "email": "alessandro.minoccheri@gmail.com",
@@ -53,6 +55,6 @@
     "registry-url": "^6.0.1"
   },
   "files": [
-    "dist"
+    "dist/**/*"
   ]
 }
