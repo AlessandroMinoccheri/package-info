@@ -1,4 +1,4 @@
-# package-info  v5.0.1
+# package-info  v5.0.2
 
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/AlessandroMinoccheri/package-info/blob/master/LICENSE)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg)](https://github.com/AlessandroMinoccheri/package-info/blob/main/CONTRIBUTING.md)
@@ -69,6 +69,12 @@ description: Get the information of a npm package
 license: MIT
 homepage: https://github.com/AlessandroMinoccheri/package-info
 author: Alessandro Minoccheri
+```
+
+## Build in local
+
+```
+npm run build
 ```
 
 ## License
