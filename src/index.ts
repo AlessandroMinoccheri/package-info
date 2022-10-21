@@ -1,58 +1,68 @@
-"use strict";
+'use strict'
 
-import got from 'got';
-import registryUrl from 'registry-url';
+import got, { RequestError } from 'got'
+import registryUrl from 'registry-url'
 
-type DistTags = {
-    latest: string
+interface DistTags {
+  latest: string
 }
 
-type Author = {
-    name: string
+interface Author {
+  name: string
 }
 
-type PackageData = {
-    name: string
-    'dist-tags': DistTags
-    description: string
-    license: string
-    homepage?: string
-    author?: Author
-    maintainers: Author[]
+interface PackageData {
+  name: string
+  'dist-tags': DistTags
+  description: string
+  license: string
+  homepage?: string
+  author?: Author
+  maintainers: Author[]
 }
 
-type Package = {
-    name: string
-    version: string
-    description: string
-    license: string
-    homepage: string
-    author: string
+interface Package {
+  name: string
+  version: string
+  description: string
+  license: string
+  homepage: string
+  author: string
 }
 
 const fetchData = async (request: string): Promise<Package> => {
-	const dataParsed: PackageData = await got(request).json();
+	let name = ''
+    let version = ''
+    let description = ''
+    let license = ''
+    let homepage = ''
+    let author = ''
+  try {
+    const dataParsed: PackageData = await got(request).json()
+    name = dataParsed.name
 
-	const name = dataParsed.name;
-	const version = dataParsed["dist-tags"].latest;
-	const description = dataParsed.description;
-	const license = dataParsed.license;
-	const homepage = dataParsed.homepage || '';
-	const author =
+     version = dataParsed['dist-tags'].latest
+    description = dataParsed.description
+    license = dataParsed.license
+    homepage = dataParsed.homepage || ''
+     author =
 		dataParsed.author?.name ||
 		dataParsed.maintainers?.map(({ name }) => name).join(', ') ||
-		'';
+		''
+  } catch (error) {
 
-	return {
-		name,
-		version,
-		description,
-		license,
-		homepage,
-		author,
-	};
-};
+  }
 
-export default async function info(name: string) {
-	return fetchData(registryUrl() + name.toLowerCase());
+  return {
+    name,
+    version,
+    description,
+    license,
+    homepage,
+    author
+  }
+}
+
+export default async function info (name: string) {
+  return await fetchData(registryUrl() + name.toLowerCase())
 }
