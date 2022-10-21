@@ -1,6 +1,6 @@
 'use strict'
 import assert from 'assert'
-import info from './../dist/index.js'
+import info from './../dist/index.modern.js'
 
 describe('Test package info',
   () => {
