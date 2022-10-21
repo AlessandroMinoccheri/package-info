@@ -5,11 +5,16 @@
   "license": "MIT",
   "repository": "AlessandroMinoccheri/package-info",
   "source": "src/index.ts",
-  "main": "dist/index.js",
-  "bin": {
-    "package-info": "dist/cli.js"
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "package-info": "dist/cli.modern.js"
+  },
   "author": {
     "name": "Alessandro Minoccheri",
     "email": "alessandro.minoccheri@gmail.com",
@@ -21,7 +26,8 @@
     "lint": "eslint . --ext .ts",
     "test": "tsc && ts-mocha tests/*.js",
     "test-gh": "tsc && ts-mocha tests/*.js",
-    "cli": "node dist/src/cli.js"
+    "dev": "microbundle watch",
+    "build": "rm -rf dist && microbundle src/*.ts -f modern"
   },
   "keywords": [
     "info",
@@ -52,6 +58,7 @@
   },
   "dependencies": {
     "got": "^12.5.1",
+    "microbundle": "^0.15.1",
     "registry-url": "^6.0.1"
   },
   "files": [
