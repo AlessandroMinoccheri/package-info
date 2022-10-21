@@ -35,8 +35,10 @@ $ npm install --save package-info
 
 ## Usage
 
+This package is working with "type": "module"
+
 ```js
-const info = require('package-info');
+import info from 'package-info'
 
 (async () => {
     console.log(await info('package-info'));

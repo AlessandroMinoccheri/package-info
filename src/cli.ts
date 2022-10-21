@@ -2,6 +2,7 @@
 'use strict'
 import info from './index.js'
 import { readFile } from 'fs/promises'
+import * as packageJson from "../package.json"
 
 interface PackageJson {
   description: string
@@ -30,9 +31,8 @@ export default async function cli (
   processArgv: string[] = process.argv
 ): Promise<void> {
   const argv: string[] = processArgv.slice(2)
-  const pkg = await readPackageInfo()
   if ((argv.length === 0) || argv.includes('--help')) {
-    help(pkg)
+    help(packageJson)
     return
   }
 
@@ -40,7 +40,7 @@ export default async function cli (
     processArgv.includes('-v') ||
 		processArgv.includes('--version')
   ) {
-    console.log(pkg.version)
+    console.log(packageJson.version)
     return
   }
 
