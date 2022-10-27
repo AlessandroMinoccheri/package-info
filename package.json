@@ -11,7 +11,7 @@
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.module.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "bin": {
     "package-info": "dist/cli.modern.js"
   },
