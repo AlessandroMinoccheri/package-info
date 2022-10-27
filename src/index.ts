@@ -1,6 +1,8 @@
 'use strict'
 
+import { errorMonitor } from 'events'
 import got, { RequestError } from 'got'
+import { exit } from 'process'
 import registryUrl from 'registry-url'
 
 interface DistTags {
@@ -32,34 +34,34 @@ interface Package {
 
 const fetchData = async (request: string): Promise<Package> => {
 	let name = ''
-    let version = ''
-    let description = ''
-    let license = ''
-    let homepage = ''
-    let author = ''
+  let version = ''
+  let description = ''
+  let license = ''
+  let homepage = ''
+  let author = ''
   try {
     const dataParsed: PackageData = await got(request).json()
     name = dataParsed.name
 
-     version = dataParsed['dist-tags'].latest
+    version = dataParsed['dist-tags'].latest
     description = dataParsed.description
     license = dataParsed.license
     homepage = dataParsed.homepage || ''
-     author =
+    author =
 		dataParsed.author?.name ||
 		dataParsed.maintainers?.map(({ name }) => name).join(', ') ||
 		''
+
+    return {
+      name,
+      version,
+      description,
+      license,
+      homepage,
+      author
+    }
   } catch (error) {
-
-  }
-
-  return {
-    name,
-    version,
-    description,
-    license,
-    homepage,
-    author
+    throw (new Error('Error on retrieve the package'))
   }
 }
 
