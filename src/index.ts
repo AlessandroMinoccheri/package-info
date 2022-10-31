@@ -32,13 +32,22 @@ interface Package {
   author: string
 }
 
-const fetchData = async (request: string): Promise<Package> => {
-	let name = ''
+type PackageResult = {
+    success: true
+    data: Package
+} | {
+	success: false
+    error: string
+}
+
+const fetchData = async (request: string): Promise<PackageResult> => {
+  let name = ''
   let version = ''
   let description = ''
   let license = ''
   let homepage = ''
   let author = ''
+
   try {
     const dataParsed: PackageData = await got(request).json()
     name = dataParsed.name
@@ -53,18 +62,29 @@ const fetchData = async (request: string): Promise<Package> => {
 		''
 
     return {
-      name,
-      version,
-      description,
-      license,
-      homepage,
-      author
+        success: true,
+        data: {
+            name,
+            version,
+            description,
+            license,
+            homepage,
+            author
+        }
     }
   } catch (error) {
-    throw (new Error('Error on retrieve the package'))
+      return {
+        success: false,
+        error: 'Error on retrieve package information'
+      }
   }
 }
 
 export default async function info (name: string) {
-  return await fetchData(registryUrl() + name.toLowerCase())
+  	const result = await fetchData(registryUrl() + name.toLowerCase())
+	if (result.success) {
+		return result.data
+	}
+
+	return result.error
 }
