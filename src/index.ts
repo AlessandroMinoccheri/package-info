@@ -1,58 +1,90 @@
-"use strict";
+'use strict'
 
-import got from 'got';
-import registryUrl from 'registry-url';
+import { errorMonitor } from 'events'
+import got, { RequestError } from 'got'
+import { exit } from 'process'
+import registryUrl from 'registry-url'
 
-type DistTags = {
-    latest: string
+interface DistTags {
+  latest: string
 }
 
-type Author = {
-    name: string
+interface Author {
+  name: string
 }
 
-type PackageData = {
-    name: string
-    'dist-tags': DistTags
-    description: string
-    license: string
-    homepage?: string
-    author?: Author
-    maintainers: Author[]
+interface PackageData {
+  name: string
+  'dist-tags': DistTags
+  description: string
+  license: string
+  homepage?: string
+  author?: Author
+  maintainers: Author[]
 }
 
-type Package = {
-    name: string
-    version: string
-    description: string
-    license: string
-    homepage: string
-    author: string
+interface Package {
+  name: string
+  version: string
+  description: string
+  license: string
+  homepage: string
+  author: string
 }
 
-const fetchData = async (request: string): Promise<Package> => {
-	const dataParsed: PackageData = await got(request).json();
+type PackageResult = {
+    success: true
+    data: Package
+} | {
+	success: false
+    error: string
+}
 
-	const name = dataParsed.name;
-	const version = dataParsed["dist-tags"].latest;
-	const description = dataParsed.description;
-	const license = dataParsed.license;
-	const homepage = dataParsed.homepage || '';
-	const author =
+const fetchData = async (request: string): Promise<PackageResult> => {
+  let name = ''
+  let version = ''
+  let description = ''
+  let license = ''
+  let homepage = ''
+  let author = ''
+
+  try {
+    const dataParsed: PackageData = await got(request).json()
+    name = dataParsed.name
+
+    version = dataParsed['dist-tags'].latest
+    description = dataParsed.description
+    license = dataParsed.license
+    homepage = dataParsed.homepage || ''
+    author =
 		dataParsed.author?.name ||
 		dataParsed.maintainers?.map(({ name }) => name).join(', ') ||
-		'';
+		''
 
-	return {
-		name,
-		version,
-		description,
-		license,
-		homepage,
-		author,
-	};
-};
+    return {
+        success: true,
+        data: {
+            name,
+            version,
+            description,
+            license,
+            homepage,
+            author
+        }
+    }
+  } catch (error) {
+      return {
+        success: false,
+        error: 'Error on retrieve package information'
+      }
+  }
+}
 
-export default async function info(name: string) {
-	return fetchData(registryUrl() + name.toLowerCase());
+export default async function info (name: string) {
+  	const result = await fetchData(registryUrl() + name.toLowerCase())
+	if (result.success) {
+		return result.data
+	}
+
+	return result.error
 }
