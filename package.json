@@ -57,9 +57,9 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "got": "^12.5.1",
     "microbundle": "^0.15.1",
-    "registry-url": "^6.0.1"
+    "registry-url": "^6.0.1",
+    "undici": "^5.12.0"
   },
   "files": [
     "dist/**/*"

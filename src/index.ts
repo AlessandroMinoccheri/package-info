@@ -1,9 +1,7 @@
 'use strict'
 
-import { errorMonitor } from 'events'
-import got, { RequestError } from 'got'
-import { exit } from 'process'
 import registryUrl from 'registry-url'
+import { request } from 'undici'
 
 interface DistTags {
   latest: string
@@ -33,14 +31,14 @@ interface Package {
 }
 
 type PackageResult = {
-    success: true
-    data: Package
+  success: true
+  data: Package
 } | {
-	success: false
-    error: string
+  success: false
+  error: string
 }
 
-const fetchData = async (request: string): Promise<PackageResult> => {
+const fetchData = async (url: string): Promise<PackageResult> => {
   let name = ''
   let version = ''
   let description = ''
@@ -49,7 +47,15 @@ const fetchData = async (request: string): Promise<PackageResult> => {
   let author = ''
 
   try {
-    const dataParsed: PackageData = await got(request).json()
+    const {
+      statusCode,
+      headers,
+      trailers,
+      body
+    } = await request(url)
+
+    const dataParsed: PackageData = await body.json()
+
     name = dataParsed.name
 
     version = dataParsed['dist-tags'].latest
