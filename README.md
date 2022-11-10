@@ -1,4 +1,4 @@
-# package-info  v5.0.4
+# package-info  v5.0.5
 
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/AlessandroMinoccheri/package-info/blob/master/LICENSE)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg)](https://github.com/AlessandroMinoccheri/package-info/blob/main/CONTRIBUTING.md)
