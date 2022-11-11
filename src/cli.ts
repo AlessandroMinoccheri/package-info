@@ -1,20 +1,11 @@
 #!/usr/bin/env node
 'use strict'
 import info from './index.js'
-import { readFile } from 'fs/promises'
 import * as packageJson from "../package.json"
 
 interface PackageJson {
   description: string
   version: string
-}
-
-async function syncReadFile (filename: string): Promise<PackageJson> {
-  return JSON.parse(await readFile(filename, 'utf-8'))
-}
-
-async function readPackageInfo (): Promise<PackageJson> {
-  return await syncReadFile('../package.json')
 }
 
 async function help (packageInfo: PackageJson): Promise<void> {
@@ -38,7 +29,7 @@ export default async function cli (
 
   if (
     processArgv.includes('-v') ||
-		processArgv.includes('--version')
+    processArgv.includes('--version')
   ) {
     console.log(packageJson.version)
     return
