@@ -27,7 +27,7 @@
     "test": "tsc && ts-mocha tests/*.js",
     "test-gh": "npm run build && ls && ts-mocha tests/*.js",
     "dev": "microbundle watch",
-    "build": "rm -rf dist && microbundle src/*.ts -f modern"
+    "build": "rm -rf dist && microbundle src/*.ts"
   },
   "keywords": [
     "info",
